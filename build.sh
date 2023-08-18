@@ -1,1 +1,1 @@
-gcc main.c -o main deloaudio.c -lopenal -lalut;./main
+gcc main.c -o main deloaudio.c  -lsndfile -lopenal;./main

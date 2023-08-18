@@ -1,7 +1,9 @@
 #pragma once
+#include <stdio.h>
+#include <stdlib.h>
+#include <sndfile.h>
 #include <AL/al.h>
 #include <AL/alc.h>
-#include <AL/alut.h>
 
 typedef struct SoundData SoundData;
 struct SoundData
@@ -27,4 +29,5 @@ struct SoundSource
 int deloaudio_init(ALCdevice *device, ALCcontext *context);
 int deloaudio_generate_source(SoundSource *sound_source);
 int deloaudio_load_from_file(SoundData *sound, char *file);
+int deloaudio_load_from_file_ogg(SoundData *sound, char *file);
 void deloaudio_play_sound(SoundSource *sound_source, SoundData *sound);
